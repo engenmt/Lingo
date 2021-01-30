@@ -22,6 +22,4 @@ def score(guess):
     return len(set(response(guess, correct) for correct in words))
 
 if __name__ == '__main__':
-    print(max({w:score(w) for w in words}, key = lambda x: x[1]))
-    
-    
+    print(max(words, key = score))
