@@ -6,7 +6,7 @@ def response(guess, correct):
     correct = list(correct)
     known = []
     misplaced = []
-    
+
     for idx in range(5):
         if guess[idx] == correct[idx]:
             known.append(idx)
@@ -43,5 +43,5 @@ def best_addition(*guesses):
 
 if __name__ == '__main__':
     
-    g = ('clipt', 'khoum', 'warns', 'gybed')
+    g = ('clipt', 'gybed', 'khoum', 'warns')
     print(g, score(*g))
