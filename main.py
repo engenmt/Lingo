@@ -1,3 +1,5 @@
+from setup import words
+
 def response(guess, correct):
     """Return the information received upon guessing the word `guess` into the word `correct`."""
     guess = list(guess)
