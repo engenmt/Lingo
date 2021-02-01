@@ -6,6 +6,7 @@ def response(guess, correct):
     correct = list(correct)
     known = []
     misplaced = []
+    
     for idx in range(5):
         if guess[idx] == correct[idx]:
             known.append(idx)
@@ -31,7 +32,7 @@ def score(*guesses):
     returns the number of equivalence classes.
     """
     return len(set(
-        sum((response(guess, correct) for guess in guesses), (correct[:1],)) for correct in words
+        sum((response(guess, correct) for guess in guesses), (correct[0],)) for correct in words
     ))
 
 
@@ -41,6 +42,6 @@ def best_addition(*guesses):
 
 
 if __name__ == '__main__':
-
+    
     g = ('clipt', 'khoum', 'warns', 'gybed')
-    print(g, score(g))
+    print(g, score(*g))
