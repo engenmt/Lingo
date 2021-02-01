@@ -1,7 +1,3 @@
-N = 5
-alpha = string.ascii_lowercase
-
-
 def filter_words(in_file_name, out_file_name):
     words_to_keep = []
     with open(in_file_name, 'r') as in_file:
