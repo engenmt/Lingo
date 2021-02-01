@@ -6,13 +6,13 @@ def response(guess, correct):
     correct = list(correct)
     known = []
     misplaced = []
-    for idx in range(N):
+    for idx in range(5):
         if guess[idx] == correct[idx]:
             known.append(idx)
             guess[idx] = None
             correct[idx] = None
     
-    for idx in range(N):
+    for idx in range(5):
         if (char_guess := guess[idx]) is not None and char_guess in correct:
             misplaced.append(idx)
             correct[correct.index(char_guess)] = None
