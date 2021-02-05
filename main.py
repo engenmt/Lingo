@@ -43,5 +43,17 @@ def best_addition(*guesses):
 
 if __name__ == '__main__':
     
-    g = ('clipt', 'gybed', 'khoum', 'warns')
-    print(g, score(*g))
+    guesses = [
+        ('blocs', 'fumed', 'garth', 'pinky']), # 8211
+        ('blots', 'cager', 'dinky', 'whump']), # 8238
+        ('chomp', 'furan', 'gybed', 'kilts']), # 8239
+        ('bumpy', 'cadge', 'knits', 'whorl']), # 8240
+        ('clipt', 'gybed', 'khoum', 'warns']), # 8246 # Mine
+        ('bumpy', 'cares', 'klong', 'width']), # 8268
+        ('bares', 'clomp', 'gunky', 'width']), # 8272
+        ('blink', 'chomp', 'gudes', 'warty']), # 8282
+        ('bints', 'cloak', 'gyred', 'whump']), # 8287
+    ]
+    for g in sorted(guesses, key = lambda t: score(*t)):
+        print(g, score(*g))
+
